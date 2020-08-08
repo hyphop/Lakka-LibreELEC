@@ -94,6 +94,13 @@
   # debug tty path
     DEBUG_TTY="/dev/ttyS2"
 
-  # failed
+  [ "$UBOOT_SYSTEM" = "khadas-edge" ] && {
+
+    # failed 
     LIBRETRO_CORES="${LIBRETRO_CORES// ppsspp /}"
     LIBRETRO_CORES="${LIBRETRO_CORES// tic80 /}"
+
+    # wifi blobs fw
+    FIRMWARE="$FIRMWARE wlan-firmware-khadas"
+
+  }
