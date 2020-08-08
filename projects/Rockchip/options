@@ -101,7 +101,7 @@
     LIBRETRO_CORES="${LIBRETRO_CORES// tic80 /}"
 
     # wifi blobs fw
-    FIRMWARE="$FIRMWARE wlan-firmware-khadas"
+    # FIRMWARE="$FIRMWARE wlan-firmware-khadas"
 
     # compression 
     SQUASHFS_COMPRESSION="zstd"
