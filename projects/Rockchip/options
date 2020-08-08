@@ -103,4 +103,7 @@
     # wifi blobs fw
     FIRMWARE="$FIRMWARE wlan-firmware-khadas"
 
+    # compression 
+    SQUASHFS_COMPRESSION="zstd"
+
   }
