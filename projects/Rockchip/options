@@ -93,3 +93,7 @@
 
   # debug tty path
     DEBUG_TTY="/dev/ttyS2"
+
+  # failed
+    LIBRETRO_CORES="${LIBRETRO_CORES// ppsspp /}"
+    LIBRETRO_CORES="${LIBRETRO_CORES// tic80 /}"
