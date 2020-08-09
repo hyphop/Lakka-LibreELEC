@@ -15,8 +15,14 @@ PKG_LONGDESC="wlan-firmware: firmwares for KHADAS WLAN drivers"
 PKG_TOOLCHAIN="manual"
 
 makeinstall_target() {
-  DESTDIR=$INSTALL/$(get_kernel_overlay_dir) ./install
-  # DESTDIR=$INSTALL/usr ./install
+#  DESTDIR=$INSTALL/$(get_kernel_overlay_dir) ./install
+#  DESTDIR=$INSTALL/usr ./install
+
+#  FW_DIR="$DESTDIR/lib/firmware"
+
+#  mkdir -p $FW_DIR
+#  cp -a firmware/* $FW_DIR
+
 }
 
 
