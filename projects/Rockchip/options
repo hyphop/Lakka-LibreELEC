@@ -101,9 +101,12 @@
     LIBRETRO_CORES="${LIBRETRO_CORES// tic80 /}"
 
     # wifi blobs fw
-    FIRMWARE="$FIRMWARE wlan-firmware-khadas"
+    # FIRMWARE="$FIRMWARE wlan-firmware-khadas"
+    FIRMWARE="wlan-firmware-khadas"
 
     # compression 
     SQUASHFS_COMPRESSION="zstd"
+    SQUASHFS_COMPRESSION="gzip"
+    KERNEL_MAKE_EXTRACMD=" rockchip/rk3399-khadas-edge.dtb"
 
   }

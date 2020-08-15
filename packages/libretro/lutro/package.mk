@@ -20,10 +20,12 @@
 
 PKG_NAME="lutro"
 PKG_VERSION="38f2b11"
+PKG_VERSION="9a5daac"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="MIT"
-PKG_SITE="https://github.com/libretro/libretro-lutro"
+#PKG_SITE="https://github.com/libretro/libretro-lutro"
+PKG_SITE="https://github.com/hyphop/libretro-lutro"
 PKG_URL="$PKG_SITE.git"
 PKG_DEPENDS_TARGET="toolchain"
 PKG_PRIORITY="optional"
@@ -39,7 +41,17 @@ make_target() {
   if [ "$ARCH" == "x86_64" ]; then
     PTR_SIZE="-m64"
   fi  
-  make HOST_CC="$HOST_CC" PTR_SIZE="$PTR_SIZE" CROSS="$TARGET_PREFIX" HAVE_COMPOSITION=1
+  make HOST_CC="$HOST_CC" PTR_SIZE="$PTR_SIZE" CROSS="$TARGET_PREFIX" \
+    HAVE_COMPOSITION=1 \
+    HAVE_INOTIFY=1 \
+    WANT_ZLIB=1 \
+    WANT_JIT=1 \
+    WANT_UNZIP=1 \
+    WANT_LUASOCKET=1 \
+    WANT_PHYSFS=1
+
+#    WANT_JIT=1 \
+
 }
 
 makeinstall_target() {

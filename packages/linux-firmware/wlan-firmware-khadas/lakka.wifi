@@ -1,0 +1,26 @@
+[    5.947650] dhd_bus_devreset: == WLAN ON ==
+[    5.947762] F1 signature read @0x18000000=0x17224356
+[    5.952453] F1 signature OK, socitype:0x1 chip:0x4354 rev:0x2 pkg:0x2
+[    5.953041] DHD: dongle ram size is set to 786432(orig 786432) at 0x180000
+[    5.953129] dhd_bus_set_default_min_res_mask: Unhandled chip id
+[    5.953430] dhd_conf_read_config: Ignore config file /lib/firmware/config.txt
+[    5.953446] Final fw_path=/lib/firmware/fw_bcm4356a2_ag.bin
+[    5.953451] Final nv_path=/lib/firmware/nvram_ap6356.txt
+[    5.953455] Final clm_path=/lib/firmware/clm.blob
+[    5.953460] Final conf_path=/lib/firmware/config.txt
+[    5.953929] dhdsdio_download_code_file: Open firmware file failed /lib/firmware/fw_bcm4356a2_ag.bin
+[    5.953936] _dhdsdio_download_firmware: dongle image file download failed
+[    5.953966] dhd_bus_devreset Failed to download binary to the dongle
+[    5.953976] dhd_net_bus_devreset: dhd_bus_devreset: -35
+[    5.953984] dhd_wl_ioctl: returning as busstate=0
+[    5.953991] dhd_dbg_detach_pkt_monitor, 2204
+[    5.953997] dhd_net_bus_devreset: dhd_bus_devreset: -35
+[    5.954119] wifi_platform_set_power = 0
+[    5.954126] ======== PULL WL_REG_ON(-1) LOW! ========
+[    5.954133] [WLAN_RFKILL]: rockchip_wifi_power: 0
+[    5.954150] [RK808]: clkout2_unprepare
+[    5.954288] [WLAN_RFKILL]: wifi shut off power.
+[    5.954298] wl_android_wifi_on: Failed
+[    5.954304] dhd_open : wl_android_wifi_on failed (-35)
+[    5.954311] dhd_stop: Enter ffffffc07b92c000
+

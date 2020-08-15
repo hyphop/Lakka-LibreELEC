@@ -72,3 +72,11 @@
 
   # debug tty path
     DEBUG_TTY="/dev/ttyAML0"
+
+
+    # failed 
+    LIBRETRO_CORES="${LIBRETRO_CORES// ppsspp /}"
+    LIBRETRO_CORES="${LIBRETRO_CORES// tic80 /}"
+
+
+    BLUETOOTH_SUPPORT=no
