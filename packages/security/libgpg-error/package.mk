@@ -23,6 +23,7 @@ pre_configure_target() {
     arm)
       GPGERROR_TUPLE=arm-unknown-linux-gnueabi
       GPGERROR_TARGET=linux-gnueabi
+#      GPGERROR_TARGET=linux-gnu$TARGET_ABI
       ;;
     x86_64)
       GPGERROR_TUPLE=x86_64-unknown-linux-gnu
