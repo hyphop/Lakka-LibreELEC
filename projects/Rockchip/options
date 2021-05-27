@@ -87,3 +87,24 @@
 
   # debug tty path
     DEBUG_TTY="/dev/ttyS2"
+
+  [ "$UBOOT_SYSTEM" = "khadas-edge" ] && {
+
+    DEBUG_TTY="console=uart8250,mmio32,0xff1a0000"
+
+    # failed
+    #LIBRETRO_CORES="${LIBRETRO_CORES// ppsspp /}"
+    LIBRETRO_CORES="${LIBRETRO_CORES// mesen /}"
+    LIBRETRO_CORES="${LIBRETRO_CORES// picodrive /}"
+    LIBRETRO_CORES="${LIBRETRO_CORES// mame2015 /}"
+
+    # wifi blobs fw
+    # FIRMWARE="$FIRMWARE wlan-firmware-khadas"
+    FIRMWARE="wlan-firmware-khadas"
+
+    # compression
+    #SQUASHFS_COMPRESSION="zstd"
+    SQUASHFS_COMPRESSION="gzip"
+    KERNEL_MAKE_EXTRACMD=" rockchip/rk3399-khadas-edge.dtb"
+
+  }
