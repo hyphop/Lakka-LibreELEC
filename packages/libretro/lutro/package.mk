@@ -45,7 +45,14 @@ make_target() {
   if [ "$ARCH" == "x86_64" ]; then
     PTR_SIZE="-m64"
   fi  
-  make HOST_CC="$HOST_CC" PTR_SIZE="$PTR_SIZE" CROSS="$TARGET_PREFIX" HAVE_COMPOSITION=1
+  make HOST_CC="$HOST_CC" PTR_SIZE="$PTR_SIZE" CROSS="$TARGET_PREFIX" HAVE_COMPOSITION=1 \
+    HAVE_INOTIFY=1 \
+    WANT_ZLIB=1 \
+    WANT_UNZIP=1 \
+    WANT_LUASOCKET=1 \
+    WANT_PHYSFS=1 \
+#    WANT_JIT=1 \
+
 }
 
 makeinstall_target() {
