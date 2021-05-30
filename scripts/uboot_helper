@@ -119,6 +119,22 @@ devices = \
         'dtb': 'meson-gxl-s905x-p212.dtb',
         'config': 'p212_defconfig'
       },
+      'khadas-vim': {
+        'dtb': 'meson-gxl-s905x-khadas-vim.dtb',
+        'config': 'khadas-vim_defconfig'
+      },
+      'khadas-vim2': {
+        'dtb': 'meson-gxm-khadas-vim2.dtb',
+        'config': 'khadas-vim2_defconfig'
+      },
+      'khadas-vim3': {
+        'dtb': 'meson-g12b-a311d-khadas-vim3.dtb',
+        'config': 'khadas-vim3_defconfig'
+      },
+      'khadas-vim3l': {
+        'dtb': 'meson-sm1-khadas-vim3l.dtb',
+        'config': 'khadas-vim3l_defconfig'
+      },
       'lepotato': {
         'dtb': 'meson-gxl-s905x-libretech-cc.dtb',
         'config': 'libretech-cc_defconfig'
