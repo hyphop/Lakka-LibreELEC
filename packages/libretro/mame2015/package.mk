@@ -57,6 +57,13 @@ make_target() {
     Generic|Switch)
       make
       ;;
+    AMLGX|Amlogic)
+      if [ ${ARCH} = "aarch64" ]; then
+        make
+      else
+        make platform=armv-neon-hardfloat
+      fi
+      ;;
     *)
       if [ ${DEVICE} = "RPi4" -a ${ARCH} = "aarch64" ]; then
         make
