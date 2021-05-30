@@ -72,3 +72,17 @@
 
   # debug tty path
     DEBUG_TTY="/dev/ttyAML0"
+
+  [ "$KHADAS" ] && {
+
+    # failed
+
+    LIBRETRO_CORES="${LIBRETRO_CORES// flycast /}"
+    LIBRETRO_CORES="${LIBRETRO_CORES// mupen64plus_next /}"
+    LIBRETRO_CORES="${LIBRETRO_CORES// picodrive /}"
+
+    # wifi blobs fw
+    # FIRMWARE="$FIRMWARE wlan-firmware-khadas"
+    FIRMWARE="wlan-firmware-khadas"
+
+  }
