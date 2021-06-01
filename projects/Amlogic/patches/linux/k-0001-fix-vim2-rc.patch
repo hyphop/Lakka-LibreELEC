@@ -1,0 +1,26 @@
+From 9d90c7bdab7e321cea9b428a45b7434503193fc8 Mon Sep 17 00:00:00 2001
+From: Artem Lapkin <art@khadas.com>
+Date: Tue, 1 Jun 2021 14:59:50 +0800
+Subject: [PATCH] fix vim2 rc
+
+Signed-off-by: Artem Lapkin <art@khadas.com>
+---
+ arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts b/arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts
+index 609f14423..e5501f18b 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-gxm-khadas-vim2.dts
+@@ -338,7 +338,7 @@
+ 	status = "okay";
+ 	pinctrl-0 = <&remote_input_ao_pins>;
+ 	pinctrl-names = "default";
+-	linux,rc-map-name = "rc-geekbox";
++	linux,rc-map-name = "rc-khadas";
+ };
+ 
+ &pwm_AO_ab {
+-- 
+2.25.1
+
