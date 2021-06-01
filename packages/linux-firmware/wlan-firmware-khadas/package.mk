@@ -19,5 +19,9 @@ makeinstall_target() {
    DESTDIR=$INSTALL/$(get_kernel_overlay_dir)
    FW_DIR="$DESTDIR/lib/firmware"
    mkdir -p $FW_DIR
+   # vendor way
    cp -a brcm/* "$FW_DIR"
+   # fix mainline
+   ln -s /lib/firmware "$FW_DIR"/brcm
+
 }
