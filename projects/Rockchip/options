@@ -94,9 +94,13 @@
 
     # failed
     #LIBRETRO_CORES="${LIBRETRO_CORES// ppsspp /}"
-    LIBRETRO_CORES="${LIBRETRO_CORES// mesen /}"
-    LIBRETRO_CORES="${LIBRETRO_CORES// picodrive /}"
-    LIBRETRO_CORES="${LIBRETRO_CORES// mame2015 /}"
+#    LIBRETRO_CORES="${LIBRETRO_CORES// mesen /}"
+#    LIBRETRO_CORES="${LIBRETRO_CORES// picodrive /}"
+#    LIBRETRO_CORES="${LIBRETRO_CORES// mame2015 /}"
+
+    for N in $NO_CORES; do
+    LIBRETRO_CORES="${LIBRETRO_CORES// $N /}"
+    done
 
     # wifi blobs fw
     # FIRMWARE="$FIRMWARE wlan-firmware-khadas"
