@@ -75,12 +75,10 @@
 
   [ "$KHADAS" ] && {
 
-    # failed
-
-    LIBRETRO_CORES="${LIBRETRO_CORES// flycast /}"
-    LIBRETRO_CORES="${LIBRETRO_CORES// mupen64plus_next /}"
-    LIBRETRO_CORES="${LIBRETRO_CORES// picodrive /}"
-
+    for N in $NO_CORES; do
+	LIBRETRO_CORES="${LIBRETRO_CORES// $N /}"
+    done
+    
     # wifi blobs fw
     # FIRMWARE="$FIRMWARE wlan-firmware-khadas"
     FIRMWARE="wlan-firmware-khadas"
